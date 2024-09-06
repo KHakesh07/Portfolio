@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+}
+body {
+    background-image: url('pexels-eberhard-grossgasteiger-844297.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
