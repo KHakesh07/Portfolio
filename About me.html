@@ -11,6 +11,36 @@
         .underline:hover{
             text-decoration: underline;
         }
+        .border:hover{
+            text-decoration: border;
+        }
+        #educationDetails {
+            display: none; /* Hide details by default */
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .toggle-button {
+            cursor: pointer;
+            font-size: 20px;
+        }
+        #educationDetails1 {
+            display: none; /* Hide details by default */
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .toggle-button1 {
+            cursor: pointer;
+            font-size: 20px;
+        }
+        #educationDetails2 {
+            display: none; /* Hide details by default */
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        .toggle-button2 {
+            cursor: pointer;
+            font-size: 20px;
+        }
     </style>
     </head>
     <body>
@@ -19,135 +49,154 @@
         </header>
         <p style="font-family: 'Courier New', monospace; background-color: rgb(0, 0, 0);text-align: center; padding: 1;"> <a href="Certifications.html" style="text-decoration: none; color: rgb(255, 255, 255); border-bottom: 2px solid transparent; transition: border-color 0.3s;" onmouseover="this.style.borderColor='white'" onmouseout="this.style.borderColor='transparent'">Certifications</a>  <a href="Projects.html" style="color: rgb(255, 255, 255); text-decoration: none;border-bottom: 2px solid transparent; transition: border-color 0.3s;" onmouseover="this.style.borderColor='white'" onmouseout="this.style.borderColor='transparent'">Projects</a></p>
         <br><br>
-        <p class="underline" style="color: aliceblue; text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; text-decoration: none; width: 90%">Hi I'm Hakesh Aspiring Data engineer with a strong foundation in computer science principles, programming, cloud computing and 
+        <p class="underline" style="color: aliceblue; text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; text-decoration: none; width: 90%;">Hi I'm Hakesh Aspiring Data engineer with a strong foundation in computer science principles, programming, cloud computing and 
             data analytics. Proficient in Python and SQL, with hands on Experience in developing machine learning models, creating 
             and querying databases, and web development and web designing. Demonstrated problem solving skills through various 
             projects, including machine learning applications. </p>
         <h4 style="color: aliceblue; text-align: center; padding: 30,20; margin: 2%;font-family: 'Courier New', monospace; outline: 3px white double;">EDUCATION</h4>
-        <table style="color: aliceblue; text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; width: 90%; line-height: 200%;">
-            <tr style="background-color: rgb(225, 225, 225) ; color: black;">
-                <th></th>
-                <th>Bachelor of Technology</th>
-                <th>Intermediate</th>
-                <th>Tenth Class</th>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(225, 225, 225) ; color: black;"><b>Qualification</b></td>
-                <td>B.Tech(Data Science)</td>
-                <td>Inter-MPC(Maths, Physics, Chemistry)</td>
-                <td>10<sup>TH</sup> Class</td>
 
-            </tr>
-            <tr>
-                <td style="background-color: rgb(225, 225, 225) ; color: black;"><b>Status</b></td>
-                <td>ongoing(2021-2025)</td>
-                <td>COmpleted(2019-2021)</td>
-                <td>Completed(2019)</td>
+        <section style="outline: 3px white double; margin: 3%;">
+            <p style="color: rgb(0, 0, 0); padding: 30,0;margin: 3%;font-family: 'Courier New', monospace; background-color: aliceblue;"><b >Under Graduation</b> <span class="toggle-button" id="toggleSymbol" style="text-align: right;">+</span></p>
+            <div id="educationDetails" style="color: rgb(255, 255, 255); font-family: 'Courier New', Courier, monospace;  padding: 30,0;margin: 3%;">
+                <p>Bachelor of Technology in Data Science</p>
+                <p>Bharatiya Engineering Science and Technology Innovation University, 2021-2025</p>
+                <p>CGPA: 8.62</p>
+                <p>Gownivarepalli, Andhra Pradesh, India</p>
+            </div>
+            <script>
+                document.getElementById("toggleSymbol").addEventListener("click", function() {
+                    var details = document.getElementById("educationDetails");
+                    var symbol = document.getElementById("toggleSymbol");
+                    
+                    if (details.style.display === "none") {
+                        details.style.display = "block";
+                        symbol.textContent = "v"; // Change symbol to down arrow when expanded
+                    } else {
+                        details.style.display = "none";
+                        symbol.textContent = "+"; // Change back to ">" when collapsed
+                    }
+                });
+            </script>
+        </section>
+        <section style="outline: 3px white double; margin: 3%;">
+            <p style="color: rgb(0, 0, 0); padding: 30,0;margin: 3%;font-family: 'Courier New', monospace; background-color: aliceblue;"><b >Intermediate(12<sup>TH</sup>)</b> <span class="toggle-button1" id="toggleSymbol1" style="text-align: right;">+</span></p>
+            <div id="educationDetails1" style="color: rgb(255, 255, 255); font-family: 'Courier New', Courier, monospace;  padding: 30,0;margin: 3%;">
+                <p>Inter-MPC</p>
+                <p>NRI Jr College, 2019-2021</p>
+                <p>Percentage: 90.8</p>
+                <p>Tenali, Andhra Pradesh, India</p>
+            </div>
+            <script>
+                document.getElementById("toggleSymbol1").addEventListener("click", function() {
+                    var interdetails = document.getElementById("educationDetails1");
+                    var symbol = document.getElementById("toggleSymbol1");
+                    
+                    if (interdetails.style.display === "none") {
+                        interdetails.style.display = "block";
+                        symbol.textContent = "v"; // Change symbol to down arrow when expanded
+                    } else {
+                        interdetails.style.display = "none";
+                        symbol.textContent = "+"; // Change back to ">" when collapsed
+                    }
+                });
+            </script>
+        </section>
 
-            </tr>
-            <tr>
-                <td style="background-color: rgb(225, 225, 225) ; color: black;"><b>CGPA/Percentage</b></td>
-                <td>6th sem CGPA:8.62</td>
-                <td>Percentage: 90.8%</tCd>
-                <td>CGPA: 9.7</td>
+        <section style="outline: 3px white double; margin: 3%;">
+            <p style="color: rgb(0, 0, 0); padding: 30,0;margin: 3%;font-family: 'Courier New', monospace; background-color: aliceblue;"><b >Tenth</b> <span class="toggle-button2" id="toggleSymbol2">+</span></p>
+            <div id="educationDetails2" style="color: rgb(255, 255, 255); font-family: 'Courier New', Courier, monospace;  padding: 30,0;margin: 3%;">
+                <p>SSC 10<sup>TH</sup> Class</p>
+                <p>Dr.K.K.R's Gowtham School, Completion Year - 2019</p>
+                <p>CGPA: 9.7</p>
+                <p>Tenali, Andhra Pradesh, India</p>
+            </div>
+            <script>
+                document.getElementById("toggleSymbol2").addEventListener("click", function() {
+                    var details = document.getElementById("educationDetails2");
+                    var symbol = document.getElementById("toggleSymbol2");
+                    
+                    if (details.style.display === "none") {
+                        details.style.display = "block";
+                        symbol.textContent = "v"; // Change symbol to down arrow when expanded
+                    } else {
+                        details.style.display = "none";
+                        symbol.textContent = "+"; // Change back to ">" when collapsed
+                    }
+                });
+            </script>
+        </section>
 
-            </tr>
-            <tr>
-                <td style="background-color: rgb(225, 225, 225) ; color: black;"><b>College/University</b></td>
-                <td>B.E.S.T Innovation University</td>
-                <td>N.R.I Jr College</td>
-                <td>Dr.K.K.R's Gowtham School</td>
-            </tr>
-            <tr>
-                <td style="background-color: rgb(225, 225, 225) ; color: black;"><b>Location</b></td>
-                <td>Gownivarepalli, AP</td>
-                <td>Tenali, AP</td>
-                <td>Tenali, AP</td>
-            </tr>
-        </table>
-        <h4 style="color: aliceblue; text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: white 3px double; width:90%;">HOBBIES</h4>
-        <ol style="color: aliceblue; padding: 30,0; outline: 3px double rgb(255, 255, 255); margin: 2%;font-family: 'Courier New', monospace; width:90%;">
-            <li style="color: black; background-color: aliceblue;"><b>Reading Books</b></li>
-            <li style="color: black; background-color: aliceblue;"><b>Listening Music</b></li>
-            <li style="color: black; background-color: aliceblue;"><b>Watching Movies</b></li>
-            <li style="color: black; background-color: aliceblue;"><b>Playing Chess</b></li>
-        </ol>
-        <h4 style="color: aliceblue;text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: white double 3px; width=90%;">SOCIAL MEDIA</h4>
-        <table style="color: aliceblue; text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; width: 90%; line-height: 500%;">
-            <tr>
-                <td>GITHUB <a href="https://github.com/KHakesh07" style="text-decoration: none; color: white;">-></a></td>
-                <td>MICROSOFT LEARN <a href="https://learn.microsoft.com/en-us/users/kadapahakesh-0204/" style="text-decoration: none; color: aliceblue;">-></a></td>
-            </tr>
-            <tr>
-                <td>GCP skill Boost Account <a href="https://www.cloudskillsboost.google/public_profiles/2b105440-d183-40d8-afa4-3dbb2f0cc75c" style="color: aliceblue; text-decoration: none;">-></a></td>
-                <td>YOUTUBE <a href="https://youtube.com/@samukadapa?si=jq7ECnunuVB5waP0" style="text-decoration: none; color: white;">-></a></td>
-            </tr>
-            <tr>
-                <td>LINKDIN <a href="https://www.linkedin.com/in/k-hakesh-79b611238" style="color: aliceblue; text-decoration: none;">-></a></td>
-                <td>CREDLY <a href="https://www.credly.com/users/k-hakesh" style="color: white; text-decoration: none;">-></a></td>
-            </tr>
-        </table>
-        <h4 style="color: aliceblue;text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: double white 3px; width: 90%;">Languages</h4>
-        <table style="color: aliceblue; text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; width: 90%; line-height: 500%;">
-            <tr>
-                <td>Telugu: Mother Tongue</td>
-                <td>English: Proficient</td>
-            </tr>
-        </table>
-        <h4 style="color: aliceblue;text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: white double 3px; width: 90%;">SKILLS</h4>
-        <table style="color: aliceblue; text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; width: 90%; line-height: 500%; font-size: large;">
-            <tr>
-                <td>Data Analysis</td>
-                <td>Python</td>
-                <td>SQL</td>
-                <td>Google Cloud Platform</td>
-            </tr>
-            <tr>
-                <td>Power BI </td>
-                <td>AWS(REDSHIFT)</td>
-                <td>AWS(Quicksight)</td>
-                <td>AWS(EMR)</td>
-            </tr>
-            <tr>
-                <td>Microsoft Fabric</td>
-                <td>Big Data Analysis</td>
-                <td>Data Engineer</td>
-                <td>Pandas</td>
-            </tr>
-            <tr>
-                <td>Numpy</td>
-                <td>HTML</td>
-                <td>CSS</td>
-                <td>SKLEARN</td>
-            </tr>
-            <tr>
-                <td>Ad Hoc Analysis</td>
-                <td>Web designing(Figma)</td>
-                <td>Machine Learning</td>
-                <td>Data Warehousing</td>
-            </tr>
-            <tr>
-                <td>Matplotlib</td>
-                <td>Confidentiality</td>
-                <td>Team Work</td>
-                <td>Problem solving</td>
-            </tr>
-            <tr>
-                <td>Time Management</td>
-                <td>Project Management</td>
-                <td>Ms Excel</td>
-                <td>Tableau</td>
-            </tr>
-            <tr>
-                <td>Business Analysis</td>
-                <td>Data Quality maintanance</td>
-                <td>Java</td>
-                <td>Data Visulization</td>
-            </tr>
-        </table>
-        <footer style="background-color: rgb(255, 255, 255); color:black; text-align: center; padding: 30,0; margin: 2%; width:90%;">
+
+
+
+
+        <section style="outline: white double 3px; margin: 3%;">
+            <h4 style="color: rgb(0, 0, 0); text-align: center; padding: 30,0;;font-family: 'Courier New', monospace; outline: white 3px double; background-color: aliceblue;">HOBBIES</h4>
+        <p style="color: aliceblue; padding: 30,0;margin: 2%;font-family: 'Courier New', monospace; text-align: center;">
+         <b>Reading Books</b> - <b>Listening Music</b> - <b>Watching Movies</b> - <b>Playing Chess</b></li>
+        </p>
+        </section>
+
+        <h4 style="color: aliceblue;text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: double white 3px;">Languages</h4>
+        <section style="color: aliceblue; text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace;">
+         <p><b style="color: black; background-color: aliceblue;">Telugu:</b> Mother Tongue  <b style="color: black; background-color: aliceblue;">English:</b> Proficient</p>
+        </section>
+        <section style="outline: 3px white double; margin: 2%;">
+            <h4 style="color: rgb(0, 0, 0);text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: white double 3px; background-color: aliceblue;"><b>SKILLS</b></h4>
+
+        <p style="color: aliceblue; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: double white 3px;"><b style="background-color: aliceblue; color: black;">Data & Business analysis:</b> Data Analysis | Ad Hoc Analysis | Power BI |
+            Ms-Excel | 
+            Data Quality Maintenance |
+            Data Visualization</p>
+        <p style="color: aliceblue; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: double white 3px;"><b style="background-color: aliceblue; color: black;">Programming & Data Science:</b>Python | Java |
+                SQL |
+                Pandas |
+                Numpy |
+                SKLEARN |
+                Matplotlib |
+                Machine Learning |
+                Big Data Analysis
+        </p>
+        <p style="color: aliceblue; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: double white 3px;"><b style="background-color: aliceblue; color: black;">Cloud Platform & Big data tools:</b>
+                    Google Cloud Platform |
+                    AWS (Redshift) |
+                    AWS (QuickSight) |
+                    AWS (EMR) |  
+                    Microsoft Fabric |
+                    Data Warehousing
+        </p>
+        <p style="color: aliceblue; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: double white 3px;"><b style="background-color: aliceblue; color: black;">Web Development & Design:</b>
+            HTML |
+            CSS |
+            Web design(Figma)
+        </p> 
+        <p style="color: aliceblue; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: double white 3px;"><b style="background-color: aliceblue; color: black;">Data Engineering:</b>
+            Microsoft Fabric
+
+        </p> 
+        <p style="color: aliceblue; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: double white 3px;"><b style="background-color: aliceblue; color: black;">Soft skills:</b>
+            Communication skills |
+            Time management |
+            Story telling |
+            Confidentiality |
+            Team work |
+            Problem solving
+        </p> 
+        </section>
+
+        <h4 style="color: aliceblue;text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace; outline: white double 3px;">SOCIAL MEDIA</h4>
+        <section  style="color: aliceblue; text-align: center; padding: 30,0; margin: 3%;font-family: 'Courier New', monospace;">
+        <p> <- 
+            |<a href="https://github.com/KHakesh07" style="text-decoration: none; color:white; background-color: transparent;" onmouseover="this.style.backgroundColor='white'; this.style.color='black';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white';"><b>GITHUB  </b></a>| - |
+            <a href="https://learn.microsoft.com/en-us/users/kadapahakesh-0204/" style="text-decoration: none; color: aliceblue; background-color: transparent;" onmouseover="this.style.color='black'; this.style.backgroundColor='white';" onmouseout="this.style.color='white'; this.style.backgroundColor='transparent';" ><B>MICROSOFT LEARN  </B></a>| - |
+            <a href="https://www.cloudskillsboost.google/public_profiles/2b105440-d183-40d8-afa4-3dbb2f0cc75c" style="color: aliceblue; text-decoration: none; background-color: transparent;" onmouseover="this.style.color='black'; this.style.backgroundColor='white';" onmouseout="this.style.color='white'; this.style.backgroundColor='transparent';"><b>GCP (Skill Boost Account)  </b></a>| - |
+            <a href="https://youtube.com/@samukadapa?si=jq7ECnunuVB5waP0" style="text-decoration: none; color: rgb(255, 255, 255); background-color: transparent;" onmouseover="this.style.backgroundColor='white'; this.style.color='black';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white';"><b>YOUTUBE  </b></a>| - |
+            <a href="https://www.linkedin.com/in/k-hakesh-79b611238" style="color: rgb(255, 255, 255); text-decoration: none; background-color:  transparent; " onmouseover="this.style.backgroundColor='white'; this.style.color='black';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='white';"><b>LINKEDIN  </b></a>| ->
+        </section>
+
+
+        <footer style="background-color: rgb(255, 255, 255); color:black; text-align: center; padding: 30,0; margin: 2%;">
             <h5 style="color: rgb(0, 0, 0); font-family: 'Courier New', monospace;">Contact Me: hakeshkadapa@gmail.com</h5>
         </footer>
     </body>
-
 </html>
